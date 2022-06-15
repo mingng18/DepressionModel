@@ -5,7 +5,7 @@ import time
 import pickle
 from streamlit_option_menu import option_menu
 
-# st.set_page_config(page_title="Depression Model", page_icon=":snowflake:")
+st.set_page_config(page_title="Depression Model", page_icon=":snowflake:")
 
 def load_model():
   loaded_model = pickle.load(open("depression_model.sav", 'rb'))
