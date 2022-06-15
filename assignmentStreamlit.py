@@ -42,11 +42,11 @@ def aboutUsPage():
   st.markdown("<h1>Depression Model</h1>", unsafe_allow_html=True)
   st.markdown("<h3>By group 13</h3>", unsafe_allow_html=True)
   st.markdown("<h4>Group members:</h4>", unsafe_allow_html=True)
+  st.write("Jonathan Wong Siew Ho U2102824:snowflake:")
+  st.write("Peter Siow Wei Chun U2102775:snowflake:")
+  st.write("Tan Kwan Yang U2102857:snowflake:")
   st.write("Ng Gih Ming U2102856:snowflake:")
-  st.write("Ng Gih Ming U2102856:snowflake:")
-  st.write("Ng Gih Ming U2102856:snowflake:")
-  st.write("Ng Gih Ming U2102856:snowflake:")
-  st.write("Ng Gih Ming U2102856:snowflake:")
+  st.write("Nafees Sadat S2121003:snowflake:")
   st.write("---")
 
 def predictionResult():
@@ -115,7 +115,7 @@ def predictionResult():
       time.sleep(0.01)
 
     '...the result is out now!'
-    'You are ' + prediction
+    'You are ' + prediction[0] + " depress"
   else:
     st.write("Press the button to check!")
   
@@ -127,7 +127,7 @@ def datasetPage():
   st.markdown("<h3>Data set preview</h3>", unsafe_allow_html=True)
   st.write("The dataset is about data concerning depressive symptoms using the Bahasa Malaysia version of the Beck Depression Inventory-II (Malay-BDI II) questionnaire with the associated acoustic features of speech and demographic information. The data was gathered from a population on social media of Bahasa Malaysia Speaker. ")
   st.write("[Link to dataset >](https://data.mendeley.com/datasets/mm4nm7ndp2/2/files/52af697a-6e3a-4763-898b-3e1db23c212f)")
-  data = pd.read_csv("dataset.csv")
+  data = pd.read_csv("datasetDepress.csv")
   st.write(data)
   st.write("---")
 
