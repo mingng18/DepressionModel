@@ -49,50 +49,51 @@ def aboutUsPage():
   st.write("---")
 
 def predictionResult():
-  st.markdown("<h3>Personal Information</h3>", unsafe_allow_html=True)
-  gender = st.radio('Gender',("Male", "Female"))
-  ethics = st.radio('Ethics',("Malay", "Chinese", "India", "Lain-lain"))
-  ages = st.text_input('Ages', 20)
-  df = pd.DataFrame({'status': ["Single", "Married", "Divorced", "Widow"],})
-  status = st.selectbox('Status',df['status'])
-  noOfDependents = st.radio('Number of dependents',("0", "1-2", "3-4", "5+"))
-  eduLevel = st.radio('Educational level',("Secondary school", "Diploma", "Degree", "Master/Prof/Doctor"))
-  workStatus = st.radio('Occupation',("Full Time", "Part Time", "Student", "Housewife", "Doesn't work"))
-  health = st.slider('Rate Your Health', 0, 3, 1)
-  st.write("---")
+  # st.markdown("<h3>Personal Information</h3>", unsafe_allow_html=True)
+  # gender = st.radio('Gender',("Male", "Female"))
+  # ethics = st.radio('Ethics',("Malay", "Chinese", "India", "Lain-lain"))
+  # ages = st.text_input('Ages', 20)
+  # df = pd.DataFrame({'status': ["Single", "Married", "Divorced", "Widow"],})
+  # status = st.selectbox('Status',df['status'])
+  # noOfDependents = st.radio('Number of dependents',("0", "1-2", "3-4", "5+"))
+  # eduLevel = st.radio('Educational level',("Secondary school", "Diploma", "Degree", "Master/Prof/Doctor"))
+  # workStatus = st.radio('Occupation',("Full Time", "Part Time", "Student", "Housewife", "Doesn't work"))
+  # health = st.slider('Rate Your Health', 0, 3, 1)
+  # st.write("---")
 
-  st.markdown("<h3>BDI-II Test</h3>", unsafe_allow_html=True)
+  st.markdown("<h3>Depression Testing</h3>", unsafe_allow_html=True)
   st.write("1 = Rarely think of, 2 = Sometimes, 3 = Always think of")
-  sadness = st.slider('Rate Your Sadness Level', 0, 3, 1)
-  pessimistic = st.slider('Rate Your Pessimistic Level', 0, 3, 1)
-  pastFailure = st.slider('Rate Your Past Failure Level', 0, 3, 1)
-  lostOfSatis = st.slider('Loss of Satisfaction', 0, 3, 1)
-  wrongFeel = st.slider('Always feel wrong?', 0, 3, 1)
-  punishFeel = st.slider('Always feel being punished?', 0, 3, 1)
-  dislikeSelf = st.slider('Dislike yourself?', 0, 3, 1)
-  critiqueSelf = st.slider('Critique yourself?', 0, 3, 1)
-  suicide = st.slider('Thought of suicide?', 0, 3, 1)
-  cry = st.slider('Want to cry?', 0, 3, 1)
-  heartBroke = st.slider('Heart Broken?', 0, 3, 1)
-  lossOfInterest = st.slider('Loss of interest?', 0, 3, 1)
-  hardDecide = st.slider('Hard to make decision?', 0, 3, 1)
-  feelUseless = st.slider('Feel useless?', 0, 3, 1)
-  lossPower = st.slider('Loss Power?', 0, 3, 1)
-  sleepQuality = st.slider('Sleep quality Drop?', 0, 3, 1)
-  annoyed = st.slider('Easily being annoyed?', 0, 3, 1)
-  lossOfAppetite = st.slider('Loss of appetite?', 0, 3, 1)
-  bodyWeight = st.slider('Body weight drop drastically?', 0, 3, 1)
-  worryPhyAppearance = st.slider('Worry about physical appearance?', 0, 3, 1)
+  sadness = st.slider('Rate Your Sadness Level', 0, 3, 0)
+  pessimistic = st.slider('Rate Your Pessimistic Level', 0, 3, 0)
+  pastFailure = st.slider('Rate Your Past Failure Level', 0, 3, 0)
+  lostOfSatis = st.slider('Loss of Satisfaction', 0, 3, 0)
+  wrongFeel = st.slider('Always feel wrong?', 0, 3, 0)
+  punishFeel = st.slider('Always feel being punished?', 0, 3, 0)
+  dislikeSelf = st.slider('Dislike yourself?', 0, 3, 0)
+  critiqueSelf = st.slider('Critique yourself?', 0, 3, 0)
+  suicide = st.slider('Thought of suicide?', 0, 3, 0)
+  cry = st.slider('Want to cry?', 0, 3, 0)
+  heartBroke = st.slider('Heart Broken?', 0, 3, 0)
+  lossOfInterest = st.slider('Loss of interest?', 0, 3, 0)
+  hardDecide = st.slider('Hard to make decision?', 0, 3, 0)
+  feelUseless = st.slider('Feel useless?', 0, 3, 0)
+  lossPower = st.slider('Loss Power?', 0, 3, 0)
+  sleepQuality = st.slider('Sleep quality Drop?', 0, 3, 0)
+  annoyed = st.slider('Easily being annoyed?', 0, 3, 0)
+  lossOfAppetite = st.slider('Loss of appetite?', 0, 3, 0)
+  bodyWeight = st.slider('Body weight drop drastically?', 0, 3, 0)
+  worryPhyAppearance = st.slider('Worry about physical appearance?', 0, 3, 0)
   st.write("---")
 
-  feature_list = [0 if gender == "Male" else 1, 
-                  0 if ethics == "Malay" else 1 if ethics == "Chinese" else 2 if ethics == "India" else 3 , 
-                  ages, 
-                  0 if status == "Single" else 1 if status == "Married" else 2 if status == "Divorced" else 3, 
-                  0 if noOfDependents == "0" else 1 if noOfDependents == "1-2" else 2 if noOfDependents == "3-4" else 3, 
-                  0 if eduLevel == "Secondary school" else 1 if eduLevel == "Diploma" else 2 if eduLevel == "Degree" else 3,
-                  0 if eduLevel == "Full Time" else 1 if eduLevel == "Part Time" else 2 if eduLevel == "Student" else 3 if eduLevel == "Housewife" else 4,
-                  health,
+  feature_list = [
+    # 0 if gender == "Male" else 1, 
+    #               0 if ethics == "Malay" else 1 if ethics == "Chinese" else 2 if ethics == "India" else 3 , 
+    #               ages, 
+    #               0 if status == "Single" else 1 if status == "Married" else 2 if status == "Divorced" else 3, 
+    #               0 if noOfDependents == "0" else 1 if noOfDependents == "1-2" else 2 if noOfDependents == "3-4" else 3, 
+    #               0 if eduLevel == "Secondary school" else 1 if eduLevel == "Diploma" else 2 if eduLevel == "Degree" else 3,
+    #               0 if eduLevel == "Full Time" else 1 if eduLevel == "Part Time" else 2 if eduLevel == "Student" else 3 if eduLevel == "Housewife" else 4,
+    #               health,
                   sadness, pessimistic, pastFailure, lostOfSatis, wrongFeel, punishFeel, dislikeSelf,
                   critiqueSelf, suicide, cry, heartBroke, lossOfInterest, hardDecide, feelUseless, 
                   lossPower, sleepQuality, annoyed, lossOfAppetite, bodyWeight, worryPhyAppearance]
@@ -113,8 +114,20 @@ def predictionResult():
       bar.progress(i + 1)
       time.sleep(0.01)
 
+    prediction_result = ""
+    st.write("Prediction")
+    if prediction == [[0]]:
+        prediction_result = "Minimal Depression"
+    elif prediction == [[1]]:
+        prediction_result = "Mild Depression"
+    elif prediction == [[2]]:
+        prediction_result = "Moderate Depression"
+    elif prediction == [[3]]:
+        prediction_result = "Severe Depression"
+
     '...the result is out now!'
-    'You are ' + prediction[0] + " depress"
+    'You are ' + prediction_result 
+    
   else:
     st.write("Press the button to check!")
   
