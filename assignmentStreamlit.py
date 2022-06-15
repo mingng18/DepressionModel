@@ -39,8 +39,7 @@ def main():
 
 #===================================title====================================================
 def aboutUsPage():
-  st.markdown("<h1>Depression Model</h1>", unsafe_allow_html=True)
-  st.markdown("<h3>By group 13</h3>", unsafe_allow_html=True)
+  st.markdown("<h3>Group 46</h3>", unsafe_allow_html=True)
   st.markdown("<h4>Group members:</h4>", unsafe_allow_html=True)
   st.write("Jonathan Wong Siew Ho U2102824:snowflake:")
   st.write("Peter Siow Wei Chun U2102775:snowflake:")
