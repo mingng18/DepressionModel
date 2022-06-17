@@ -63,26 +63,26 @@ def predictionResult():
 
   st.markdown("<h3>Depression Testing</h3>", unsafe_allow_html=True)
   st.write("0 = Rarely think of, 1 = Sometimes, 2 = Think of in a regular interval, 3 = Always think of")
-  sadness = st.slider('Rate Your Sadness Level', 0, 3, 0)
-  pessimistic = st.slider('Rate Your Pessimistic Level', 0, 3, 0)
-  pastFailure = st.slider('Rate Your Past Failure Level', 0, 3, 0)
-  lostOfSatis = st.slider('Loss of Satisfaction', 0, 3, 0)
-  wrongFeel = st.slider('Always feel wrong?', 0, 3, 0)
-  punishFeel = st.slider('Always feel being punished?', 0, 3, 0)
-  dislikeSelf = st.slider('Dislike yourself?', 0, 3, 0)
-  critiqueSelf = st.slider('Critique yourself?', 0, 3, 0)
-  suicide = st.slider('Thought of suicide?', 0, 3, 0)
-  cry = st.slider('Want to cry?', 0, 3, 0)
-  heartBroke = st.slider('Heart Broken?', 0, 3, 0)
-  lossOfInterest = st.slider('Loss of interest?', 0, 3, 0)
-  hardDecide = st.slider('Hard to make decision?', 0, 3, 0)
-  feelUseless = st.slider('Feel useless?', 0, 3, 0)
-  lossPower = st.slider('Loss Power?', 0, 3, 0)
-  sleepQuality = st.slider('Sleep quality Drop?', 0, 3, 0)
-  annoyed = st.slider('Easily being annoyed?', 0, 3, 0)
-  lossOfAppetite = st.slider('Loss of appetite?', 0, 3, 0)
-  bodyWeight = st.slider('Body weight drop drastically?', 0, 3, 0)
-  worryPhyAppearance = st.slider('Worry about physical appearance?', 0, 3, 0)
+  sadness = st.slider('Tahap Kesedihan | Rate Your Sadness Level', 0, 3, 0)
+  pessimistic = st.slider('Tahap Pesimis | Rate Your Pessimistic Level', 0, 3, 0)
+  pastFailure = st.slider('Tahap Kegagalan Lalu | Rate Your Past Failure Level', 0, 3, 0)
+  lostOfSatis = st.slider('Hilang Kepuasan | Loss of Satisfaction', 0, 3, 0)
+  wrongFeel = st.slider('Kerap Rasa Bersalah? | Always feel wrong?', 0, 3, 0)
+  punishFeel = st.slider('Kerap Rasa Dihukum | Always feel being punished?', 0, 3, 0)
+  dislikeSelf = st.slider('Tidak suka diri sendiri? | Dislike yourself?', 0, 3, 0)
+  critiqueSelf = st.slider('Kerap Kritik diri sendiri? | Critique yourself?', 0, 3, 0)
+  suicide = st.slider('Fikir untuk Bunuh diri? | Thought of suicide?', 0, 3, 0)
+  cry = st.slider('Ingin menangis? | Want to cry?', 0, 3, 0)
+  heartBroke = st.slider('Sakit hati | Heart Broken?', 0, 3, 0)
+  lossOfInterest = st.slider('Hilang minat? | Loss of interest?', 0, 3, 0)
+  hardDecide = st.slider('Sukar buat keputusan? | Hard to make decision?', 0, 3, 0)
+  feelUseless = st.slider('Tak berguna? | Feel useless?', 0, 3, 0)
+  lossPower = st.slider('Hilang tenaga? | Loss Power?', 0, 3, 0)
+  sleepQuality = st.slider('Perubahan tidur? | Sleep quality Drop?', 0, 3, 0)
+  annoyed = st.slider('Terganggu? | Easily being annoyed?', 0, 3, 0)
+  lossOfAppetite = st.slider('Perubahan selera? | Loss of appetite?', 0, 3, 0)
+  bodyWeight = st.slider('Masalah berat badan? | Body weight drop drastically?', 0, 3, 0)
+  worryPhyAppearance = st.slider('Risau keadaan fizikal? | Worry about physical appearance?', 0, 3, 0)
   st.write("---")
 
   feature_list = [
@@ -117,7 +117,7 @@ def predictionResult():
     prediction_result = ""
     st.write("Prediction")
     if prediction == [[0]]:
-        prediction_result = "Minimal Depression"
+        prediction_result = "None"
     elif prediction == [[1]]:
         prediction_result = "Mild Depression"
     elif prediction == [[2]]:
