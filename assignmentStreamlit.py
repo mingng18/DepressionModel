@@ -62,7 +62,7 @@ def predictionResult():
   # st.write("---")
 
   st.markdown("<h3>Depression Testing</h3>", unsafe_allow_html=True)
-  st.write("1 = Rarely think of, 2 = Sometimes, 3 = Always think of")
+  st.write("0 = Rarely think of, 1 = Sometimes, 2 = Think of in a regular interval, 3 = Always think of")
   sadness = st.slider('Rate Your Sadness Level', 0, 3, 0)
   pessimistic = st.slider('Rate Your Pessimistic Level', 0, 3, 0)
   pastFailure = st.slider('Rate Your Past Failure Level', 0, 3, 0)
